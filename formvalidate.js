@@ -2,17 +2,20 @@ $(document).ready(function(){
 
 $("#form1").validate({
 
-rules:{
+rules:
+{
 	txtName:"required",
 	txtTitle:"required",
 	txtCompany:"required",
 
-	txtEmail:{
+	txtEmail:
+	{
 		required:true,
-		txtEmail:true
+		email:true
 	},
 
-txtNumber:{
+txtNumber:
+{
 	required:true,
 	minlength:10,
 	maxlength:10
@@ -24,7 +27,15 @@ messages:
 	txtName:"please enter your name",
 	txtTitle:"please enter the title",
 	txtCompany:"please enter the company",
-	txtEmail:"please enter a valid email",
+	
+
+
+	txtEmail:
+	{
+		required:"please enter a mail address",
+		email:"please enter a valid email address"
+
+	},
 
 	txtNumber:
 	{
